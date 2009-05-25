@@ -1,6 +1,6 @@
 require 'is_it_one_nine'
 require 'test/unit'
-class TestIsItOneNine < Test::Unit::TestCase
+class IsItOneNineTest < Test::Unit::TestCase
   def test_should_count_ten_fails
     iion = IsItOneNine.new('hpricot')
     assert_equal 10, iion.fails
