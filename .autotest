@@ -8,18 +8,3 @@ Autotest.add_hook :initialize do  |at|
      at.files_matching(/^test\/#{m[1]}_test\.rb$/)
  end
 end
-
-class Autotest
-	alias :old_path_to_class_name :path_to_classname
-	def path_to_classname(s)
-     sep = File::SEPARATOR
-     f = s.sub(/^test#{sep}((unit|functional|\
-                             integration|views|\
-                             controllers|helpers)\
-                             #{sep})?/, '').sub(/\.rb$/, '').split(sep)
-     f = f.map { |path| path.split(/_/).map { |seg|
-         seg.capitalize }.join }
-     res = f.join('::')
-     res
-	end
-end
