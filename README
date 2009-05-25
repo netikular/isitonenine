@@ -1,0 +1,27 @@
+== Isitonenine
+
+
+== Description
+A simple script that will run through your gems and give you a report of how many are being reported as good or not.
+
+Uses the isitruby19.com website as its data source.
+
+
+== FEATURES:
+
+Can check all the gems in your gems list or a specified gem
+
+== How to use
+
+	####
+	# Single Gem
+	rake check_gem GEM_NAME="webrat"
+
+	####
+	# All gems
+	rake check_all
+
+
+== ToDo
+
+	* Make it so it flags the versions you have installed as good or not.
